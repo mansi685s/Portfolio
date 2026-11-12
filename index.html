@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mansi Sahu | Java Developer</title>
+<style>
+:root{--bg:#fafaf9;--card:#fff;--text:#1c1917;--muted:#6b6560;--line:#e7e5e4;--accent:#0f766e;--accent-soft:#ccfbf1;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121110;--card:#1c1b19;--text:#f5f5f4;--muted:#a8a29e;--line:#2e2c29;--accent:#5eead4;--accent-soft:#134e4a}}
+:root[data-theme="dark"]{--bg:#121110;--card:#1c1b19;--text:#f5f5f4;--muted:#a8a29e;--line:#2e2c29;--accent:#5eead4;--accent-soft:#134e4a}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+nav .links{display:flex;gap:18px;font-size:14px;color:var(--muted);overflow-x:auto}
+nav .links a:hover{color:var(--accent)}
+.logo{font-weight:700}
+button.t{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:14px}
+section{padding:56px 0 8px}
+h2{font-size:24px;margin:0 0 20px;letter-spacing:-.01em}
+h2::after{content:"";display:block;width:36px;height:3px;background:var(--accent);margin-top:8px;border-radius:2px}
+.hero{padding:72px 0 24px;display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.av{width:104px;height:104px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-size:38px;font-weight:700}
+.hero h1{font-size:clamp(32px,6vw,48px);margin:0;line-height:1.1;letter-spacing:-.02em}
+.hero .role{color:var(--accent);font-weight:600;margin:6px 0 10px}
+.hero p{color:var(--muted);max-width:560px;margin:0 0 18px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:9px 16px;border-radius:8px;border:1px solid var(--line);background:var(--card);font-size:14px;font-weight:500}
+.btn.p{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.btn:hover{border-color:var(--accent)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-top:28px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.stat b{font-size:22px;color:var(--accent);display:block}
+.stat span{font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.card h3{margin:0 0 4px;font-size:17px}
+.card p{margin:6px 0 10px;color:var(--muted);font-size:14.5px}
+.tag{display:inline-block;font-size:12px;padding:2px 9px;border-radius:99px;background:var(--accent-soft);color:var(--accent);margin:0 4px 4px 0}
+.meta{font-size:13px;color:var(--muted)}
+.card a.l{font-size:14px;color:var(--accent);font-weight:500}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.skills h3{font-size:14px;color:var(--muted);margin:0 0 8px;text-transform:uppercase;letter-spacing:.05em}
+.feat{border-color:var(--accent)}
+ul.ach{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+ul.ach li{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:14px 16px}
+ul.ach b{display:block}
+.more{margin-top:14px}
+.meta+a.l{display:inline-block;margin-top:8px}
+#moreCerts{display:none}
+#moreCerts.open{display:grid}
+footer{padding:48px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+.edu .card{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><span class="logo">Mansi Sahu</span>
+<div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#certs">Certificates</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a></div>
+<button class="t" id="theme" aria-label="Toggle theme">◐</button></div></nav>
+
+<main class="wrap">
+<header class="hero">
+<div class="av">MS</div>
+<div>
+<h1>Mansi Sahu</h1>
+<div class="role">Software Engineer · Java Developer · Spring Boot</div>
+<p>Aspiring software engineer who builds full-stack web and desktop applications with Java, Spring Boot and MySQL. Looking for a Software Engineer / Java Developer role to build scalable, efficient backend systems.</p>
+<div class="btns">
+<a class="btn p" href="#projects">View projects</a>
+<a class="btn" href="https://github.com/mansi685s" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/mansi-sahu-978632297" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="mailto:mansisahu75150@gmail.com">Email me</a>
+</div>
+</div>
+</header>
+
+<div class="stats">
+<div class="stat"><b>1000+</b><span>DSA problems solved</span></div>
+<div class="stat"><b>600+</b><span>LeetCode</span></div>
+<div class="stat"><b>400+</b><span>GeeksforGeeks</span></div>
+<div class="stat"><b>8.36</b><span>Current CGPA</span></div>
+</div>
+
+<section id="about">
+<h2>About</h2>
+<p>I'm a B.Tech Computer Science &amp; Engineering student (AIML specialization) at LNCT, Bhopal, graduating in 2027. I have a strong foundation in data structures, algorithms, OOP and DBMS, and I enjoy turning ideas into working applications, from REST APIs with JWT security to desktop apps with Java Swing.</p>
+<div class="edu grid" style="margin-top:14px"><div class="card"><div><h3>B.Tech in Computer Science &amp; Engineering (AIML)</h3><div class="meta">LNCT, Bhopal</div></div><div class="meta">2023 – 2027 · CGPA 8.36 (current)</div></div></div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<div class="card"><h3>Languages</h3><span class="tag">Java</span><span class="tag">Python</span></div>
+<div class="card"><h3>Backend</h3><span class="tag">Spring Boot</span><span class="tag">Spring MVC</span><span class="tag">Spring Security (JWT)</span><span class="tag">Hibernate</span><span class="tag">REST APIs</span><span class="tag">Maven</span></div>
+<div class="card"><h3>Frontend</h3><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Java Swing</span></div>
+<div class="card"><h3>Database</h3><span class="tag">MySQL</span><span class="tag">JDBC</span></div>
+<div class="card"><h3>Tools</h3><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">IntelliJ IDEA</span><span class="tag">Eclipse</span><span class="tag">VS Code</span></div>
+<div class="card"><h3>AI &amp; Fundamentals</h3><span class="tag">Generative AI</span><span class="tag">LLMs</span><span class="tag">Prompt Engineering</span><span class="tag">RAG</span><span class="tag">DSA</span><span class="tag">OOP</span><span class="tag">DBMS</span></div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="grid">
+<div class="card"><h3>Task Management System</h3><div><span class="tag">Spring Boot</span><span class="tag">JWT</span><span class="tag">MySQL</span><span class="tag">JPA/Hibernate</span></div><p>Full-stack task app with secure JWT authentication and role-based access. Supports task creation, assignment, status tracking, priorities, search/filter and CRUD through RESTful APIs.</p><a class="l" href="https://github.com/mansi685s/Task-Management-System" target="_blank" rel="noopener">View on GitHub →</a></div>
+<div class="card"><h3>Mini Ride Booking System</h3><div><span class="tag">Spring Boot</span><span class="tag">MySQL</span><span class="tag">HTML/CSS/JS</span></div><p>Ride-booking app with user authentication, ride requests and automated driver assignment. Includes a dynamic fare calculation engine and a responsive interface for real-time booking updates.</p><a class="l" href="https://github.com/mansi685s/Mini-Ride-Booking-System" target="_blank" rel="noopener">View on GitHub →</a></div>
+<div class="card"><h3>Online Examination System</h3><div><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">MySQL</span></div><p>Web exam platform with student login, timed MCQ tests and automatic results. Admin dashboard for question bank, exam creation and student records, backed by REST APIs.</p><a class="l" href="https://github.com/mansi685s/Online-Examination-System" target="_blank" rel="noopener">View on GitHub →</a></div>
+<div class="card"><h3>Bank Management System</h3><div><span class="tag">Java Swing</span><span class="tag">MySQL</span></div><p>Desktop banking application built with Java Swing and MySQL.</p><a class="l" href="https://github.com/mansi685s/Bank-Management-System" target="_blank" rel="noopener">View on GitHub →</a></div>
+<div class="card"><h3>DSA Daily Practice</h3><div><span class="tag">DSA</span><span class="tag">Java</span></div><p>My daily problem-solving practice and solutions repository.</p><a class="l" href="https://github.com/mansi685s/DSA-Daily-Practice" target="_blank" rel="noopener">View on GitHub →</a></div>
+</div>
+</section>
+
+<section id="certs">
+<h2>Certificates</h2>
+<div class="grid">
+<div class="card feat"><h3>Introduction to Machine Learning</h3><div class="meta">NPTEL Elite · IIT Madras · Jan–Apr 2026</div><p>Consolidated score 60%, a 12-week course with a proctored exam.</p><a class="l" href="certificates/nptel-machine-learning.pdf" target="_blank" rel="noopener">View certificate →</a></div>
+<div class="card feat"><h3>Java Programming (Self Paced)</h3><div class="meta">GeeksforGeeks</div><p>Course completion certificate.</p><a class="l" href="certificates/gfg-java-programming.pdf" target="_blank" rel="noopener">View certificate →</a></div>
+<div class="card feat"><h3>Introduction to Modern AI</h3><div class="meta">Cisco Networking Academy · Dec 2025</div><p>AI fundamentals and LLMs.</p><a class="l" href="certificates/cisco-intro-modern-ai.pdf" target="_blank" rel="noopener">View certificate →</a></div>
+</div>
+<button class="btn more" id="toggleCerts">Show more certificates</button>
+<div class="grid more" id="moreCerts">
+<div class="card"><h3>Python Essentials 1</h3><div class="meta">Cisco Networking Academy · Apr 2026</div><a class="l" href="certificates/cisco-python-essentials-1.pdf" target="_blank" rel="noopener">View certificate →</a></div>
+<div class="card"><h3>Python Essentials 2</h3><div class="meta">Cisco Networking Academy · Apr 2026</div><a class="l" href="certificates/cisco-python-essentials-2.pdf" target="_blank" rel="noopener">View certificate →</a></div>
+<div class="card"><h3>Introduction to Data Science</h3><div class="meta">Cisco Networking Academy · Apr 2026</div><a class="l" href="certificates/cisco-intro-data-science.pdf" target="_blank" rel="noopener">View certificate →</a></div>
+<div class="card"><h3>Apply AI: Analyze Customer Reviews</h3><div class="meta">Cisco Networking Academy · Apr 2026</div><a class="l" href="certificates/cisco-apply-ai-customer-reviews.pdf" target="_blank" rel="noopener">View certificate →</a></div>
+<div class="card"><h3>CCNA: Introduction to Networks</h3><div class="meta">Cisco Networking Academy · May 2026</div><a class="l" href="certificates/cisco-ccna-intro-networks.pdf" target="_blank" rel="noopener">View certificate →</a></div>
+<div class="card"><h3>CCNA: Switching, Routing, and Wireless Essentials</h3><div class="meta">Cisco Networking Academy · May 2026</div><a class="l" href="certificates/cisco-ccna-switching-routing.pdf" target="_blank" rel="noopener">View certificate →</a></div>
+<div class="card"><h3>CCNA: Enterprise Networking, Security, and Automation</h3><div class="meta">Cisco Networking Academy · May 2026</div><a class="l" href="certificates/cisco-ccna-enterprise.pdf" target="_blank" rel="noopener">View certificate →</a></div>
+<div class="card"><h3>Networking Essentials</h3><div class="meta">Cisco Networking Academy · Dec 2025</div><a class="l" href="certificates/cisco-networking-essentials.pdf" target="_blank" rel="noopener">View certificate →</a></div>
+<div class="card"><h3>Breaking into Product Management</h3><div class="meta">GeeksforGeeks · 1-week course</div><a class="l" href="certificates/gfg-product-management.pdf" target="_blank" rel="noopener">View certificate →</a></div>
+</div>
+</section>
+
+<section id="achievements">
+<h2>Achievements</h2>
+<ul class="ach">
+<li><b>1000+ DSA problems solved</b>600+ on LeetCode and 400+ on GeeksforGeeks; earned the LeetCode 100-Day, 200-Day and 365-Day badges. <a class="l" style="color:var(--accent)" href="https://leetcode.com/u/mansi685/" target="_blank" rel="noopener">LeetCode</a> · <a style="color:var(--accent)" href="https://www.geeksforgeeks.org/profile/mansisahnnco?tab=activity" target="_blank" rel="noopener">GeeksforGeeks</a></li>
+<li><b>Smart India Hackathon (SIH) volunteer</b>Supported event coordination and participant management.</li>
+<li><b>National-level sports</b>Competed in 4 National Championships in Baseball, Softball and Drop Roball; Gold and Bronze medalist in Drop Roball.</li>
+</ul>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>I'm open to Software Engineer and Java Developer opportunities. Let's connect.</p>
+<div class="btns">
+<a class="btn p" href="mailto:mansisahu75150@gmail.com">mansisahu75150@gmail.com</a>
+<a class="btn" href="https://www.linkedin.com/in/mansi-sahu-978632297" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://github.com/mansi685s" target="_blank" rel="noopener">GitHub</a>
+</div>
+<p class="meta">Based in Bhopal, Madhya Pradesh, India</p>
+</section>
+</main>
+<footer>© 2026 Mansi Sahu</footer>
+
+<script>
+(function(){
+var root=document.documentElement,btn=document.getElementById('theme');
+try{var s=localStorage.getItem('theme');if(s)root.setAttribute('data-theme',s)}catch(e){}
+btn.onclick=function(){
+var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+var n=dark?'light':'dark';root.setAttribute('data-theme',n);
+try{localStorage.setItem('theme',n)}catch(e){}
+};
+var m=document.getElementById('moreCerts'),t=document.getElementById('toggleCerts');
+t.onclick=function(){var o=m.classList.toggle('open');t.textContent=o?'Show fewer certificates':'Show more certificates'};
+})();
+</script>
+</body>
+</html>
